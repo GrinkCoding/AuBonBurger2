@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Raleway&display=swap');
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
+
+/* Général */
+*,
+::before,
+::after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #000;
+  /* background-color: blue; */
+}
+
+.titre2, .titre3{
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+  color:#fff;
+  text-align: center;
+}
+
+.titre2{
+  font-size: 3.5rem;
+}
+
+.titre3{
+  font-size: 2.5rem;
+}
+
+.titre2 span, .titre3 span{
+  border-bottom: .3rem solid #FF8427;
+}
+
+/* header */
+.header{
+    width: 100%;
+    /* height: 100vh; */
+    height: 80vh;
+    background-image: url(ressource/header3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 30%;
+    color:#fff;
+    position: relative;
+  }
+
+  .titre{
+    color:#fff;
+    position: absolute;
+    top: 45%; /*35%*/
+    left: 50%;
+    transform: translate(-50%,-200%);
+    font-size: 5rem;
+    text-align: center;
+    line-height: 7.3rem;
+    font-family: 'Raleway', sans-serif; 
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+  .header .button{
+    background-color: #FF8427;
+    padding: 1.3rem 2.5rem;
+    border-radius: .5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-500%);
+    outline:none;
+    border:none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor:pointer;
+    transition : background-color .5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .header .button a{
+    text-decoration: none;
+    color:#000;
+  }
+
+  .header .button:hover{
+    background-color: #F1E8B8;
+  }
+
+  /* navbar */
+
+  .navbar{
+    width: 100%;
+    height: 7rem;
+    background: #000;
+    position: fixed;
+    transform: translateY(-8rem);
+    color:#FF8427;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    border-bottom: solid 0.1rem #FF8427;
+  }
+
+  .logo{
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 5rem;
+    color:#FF8427;
+    margin-right: auto;
+    transform: translateY(-4rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+  .link ul{
+    display: flex;
+  }
+
+  .link-item{
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    list-style: none;
+    display: flex;
+    transform: translateY(-4rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .link-item a{
+    text-decoration: none;
+    color:#FF8427;
+    padding: 0 2rem;
+    transition : color .5s;
+  }
+
+  .link-item:last-child{
+    margin-right: 10rem;
+  }
+
+  .link-item span::after{
+    content: '';
+    display: block;
+    width: 0;
+    margin: 0.5rem auto 0 auto;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    background: #FF8427;
+    transition: all 0.4s ease-out;
+}
+
+  .link-item span:hover::after{
+      width: 80%;
+  }
+
+
+  /* Notre Histoire */
+#notreHistoire{
+  color:#fff;
+  height: 70rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.paragraph-history{
+  font-family: 'Raleway', sans-serif; 
+  font-size: 2rem;
+  margin: 2rem  20rem 5rem 20rem;
+  text-align: justify;
+  opacity: 0;
+  visibility: hidden;
+}
+
+  /* Parallax */
+  .parallax1{
+  width:100%;
+  height : 30rem;
+  /* background: url("ressource/parallax.jpg"); */
+  background: url("ressource/parallax_small1.png");
+  background-repeat : no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ }
+
+ .parallax2{
+  width:100%;
+ height : 30rem;
+ /* background: url("ressource/parallax2.jpg"); */
+ background: url("ressource/parallax_small2.png");
+ background-repeat : no-repeat;
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+}
+
+
+ /* Nos spécialités */
+
+ #nosSpecialites{
+  width: 100%;
+  height: 195rem;
+}
+
+#nosSpecialites .titre2{
+  margin: 7rem 0 10rem 0;
+}
+
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10rem;
+}
+
+.box{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap : 10rem; 
+}
+
+.box:nth-child(1), .box:nth-child(3){
+  margin-left: 5rem;
+}
+
+.box:nth-child(2){
+  display:flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+.box-description{
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  text-align: justify;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius :62% 38% 84% 16% / 30% 55% 45% 70%;
+  border: .3rem solid #FF8427;
+}
+
+.box-description .titre3{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.box-description p{
+  line-height: 110%;
+  margin-bottom: 10rem;
+}
+
+.box-img{
+  height: 50rem;
+  border: .3rem solid #FF8427;
+  border-radius: 0.5rem;
+}
+
+.box .box-img{
+  transform: translateX(-30rem);
+  opacity: 0;
+  visibility: hidden;
+}
+.box:nth-child(2) .box-img{
+  display:none;
+  transform: translateX(30rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box .box-description{
+  display:none;
+  transform: translateX(10rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:nth-child(2) .box-description{
+  border-radius: 22% 78% 17% 83% / 60% 41% 59% 40% ;
+  order:-1;
+  transform: translateX(-10rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.box-img{
+  width: 40rem;
+}
+
+.box-description{
+  width: 43rem;
+}
+
+
+.img-items{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Suivez-nous */
+
+#suivezNous{
+  width: 100%;
+  height: 50rem;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contain-text{
+  width: 89rem;
+}
+.text{
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.inputEmail{
+  width: 50rem;
+  height: 4.5rem;
+  font-size: 2rem;
+  outline: none;
+  padding: 1rem;
+  margin-right: 2rem;
+  font-family: 'Playfair Display', serif;
+  transform: translateX(-50rem);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.inputButton{
+  height: 4.5rem;
+  width: 15rem;
+  font-size: 2rem;
+  background-color:#FF8427;
+  font-family: 'Playfair Display', serif;
+  border:none;
+  outline: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition : background-color .5s;
+  transform: translateX(30rem);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.inputButton:hover{
+  background-color: #F1E8B8;
+}
+
+.separation{
+  background-color:#FF8427;
+  width: 111.9rem;
+  height: .2rem;
+  text-align: center;
+}
+
+.logo-footer{
+  font-size: 3.5rem;
+  font-family: 'Dancing Script', cursive;
+  color:#FF8427;
+  transform:translateX(-20rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.media{
+  width: 30rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.media-item{
+  display: inline-block;
+  width: 3.5rem;
+  transform:scale(1);
+  transition: all .5s;
+}
+
+.link-media{
+  display: none;
+  transform:translateX(20rem);
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+
+.media-item:hover{
+  transform:scale(1.1);
+}
+
+.twitter{
+  margin-top: .5rem;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box-footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.copiyright{
+  color:#FF8427;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-top: 2rem;
+  transform:translateY(10rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Media querie */
+
+/* (1024px /16) *100 */
+
+@media screen and (max-width : 1024px){
+
+  .box:nth-child(1), .box:nth-child(3){
+    margin-left: 0;
+    margin-right: 0;
+    display:flex;
+    justify-content: center;
+  }
+  
+  .box:nth-child(2){
+    display:flex;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .separation{
+    width: 100%;
+  }
+
+}
+
+/* 966px */
+@media screen and (max-width : 966px){
+  html{
+    font-size: 54%;
+    
+  }
+
+}
+
+/* 790px */
+@media screen and (max-width : 835px){
+
+  #notreHistoire{
+    /* height: 70rem; */
+    height: 100%;
+    margin-bottom: 5rem;
+  }
+
+  #nosSpecialites{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10rem;
+  }
+
+  .box{
+    display : flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    grid-gap:5rem;
+    /* background-color: blue; */
+  }  
+
+  .box:nth-child(2) .box-description{
+    border-radius: 22% 78% 17% 83% / 60% 41% 59% 40% ;
+    order:2;
+    transform: translateX(-10rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
